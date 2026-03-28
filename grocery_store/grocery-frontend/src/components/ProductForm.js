@@ -77,8 +77,19 @@ function ProductForm({ product, onSubmit, onCancel }) {
               <input type="number" name="price" value={formData.price} onChange={handleChange} required />
             </div>
             <div className="form-group">
+              <label>Discount Price (₹)</label>
+              <input type="number" name="discountPrice" value={formData.discountPrice} onChange={handleChange} />
+            </div>
+          </div>
+
+          <div className="form-row">
+            <div className="form-group">
               <label>Stock</label>
               <input type="number" name="stock" value={formData.stock} onChange={handleChange} required />
+            </div>
+            <div className="form-group">
+              <label>Rating (0-5)</label>
+              <input type="number" step="0.1" name="rating" value={formData.rating} onChange={handleChange} />
             </div>
           </div>
 
@@ -91,12 +102,20 @@ function ProductForm({ product, onSubmit, onCancel }) {
                 <option value="Vegetables">Vegetables</option>
                 <option value="Bakery">Bakery</option>
                 <option value="Beverages">Beverages</option>
+                <option value="Staples">Staples</option>
               </select>
             </div>
             <div className="form-group">
               <label>Image URL</label>
               <input name="imageUrl" value={formData.imageUrl} onChange={handleChange} placeholder="https://..." />
             </div>
+          </div>
+
+          <div className="form-group checkbox-group">
+            <label className="checkbox-label">
+              <input type="checkbox" name="isAvailable" checked={formData.isAvailable} onChange={handleChange} />
+              <span>Available for Order</span>
+            </label>
           </div>
 
           <div className="form-actions">

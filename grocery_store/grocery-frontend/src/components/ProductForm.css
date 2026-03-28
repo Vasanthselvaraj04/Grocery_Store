@@ -100,3 +100,29 @@
 .save-btn:hover {
   background: #059669;
 }
+
+.checkbox-group {
+  margin-top: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-label input {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.checkbox-label span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1e293b;
+}
